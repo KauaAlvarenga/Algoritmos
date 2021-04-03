@@ -1,0 +1,11 @@
+algoritmo "conversão de °F para °C de 50 a 100"
+var
+C: real
+F: inteiro
+inicio
+escreval ("Graus de 50 a 100 em Fahrenheit convertidos para Celsius :")
+para F de 50 ate 100 faca
+C <- (F-32)*5/9
+escreval (C)
+fimpara
+fimalgoritmo

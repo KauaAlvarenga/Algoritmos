@@ -1,0 +1,23 @@
+Algoritmo "altura média”
+// Disciplina : Algoritmo e Lógica de Programação
+// Professor : João Bandeira
+// Descrição : Altura média de um time de vôlei
+// Autor(a) : Victor Hugo da Silva Ferreira
+// Data atual : 23/02/2021
+
+Var
+njog,x : inteiro
+media,altura,soma : real
+
+Inicio
+soma <- 0
+escreval( "Digite o número de jogadores:")
+leia (njog)
+escreval( "A altura dos jogadores é:")
+Para x de 1 ate njog faca
+leia (altura)
+soma <- soma + altura
+Fimpara
+media <- soma/njog
+escreval("A média é:", media)
+Fimalgoritmo

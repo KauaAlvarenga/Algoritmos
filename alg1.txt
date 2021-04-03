@@ -1,0 +1,58 @@
+
+algoritmo "Cadastro de Armazenamento"
+//O algoritmo cadastrará 4 máquinas, e ao término deverá escrever:
+//Todas as máquinas cadastradas
+//A máquina de maior memória
+//A máquina de menor memória
+//A máquina de maior armazenamento
+//A máquina de menor armazenamento
+var
+i, maiorram, maiorhd, menorram, menorhd : inteiro
+computador: vetor [0..3] de caractere
+qram, qhd: vetor[0..3] de real
+// qram = quantidade ram (GB)
+// qhd = quantidade hd (GB)
+inicio
+para i de 0 ate 3 faca
+escreval ("nome do computador: ", i+1)
+leia (computador[i])
+escreval ("Quantidade de RAM(GB): ")
+leia (qram[i])
+escreval ("quantidade de HD(GB): ")
+leia (qhd[i])
+fimpara
+maiorram <- 0
+menorram <- 0
+
+maiorhd <- 0
+menorhd <- 0
+para i de 0 ate 3 faca
+se qram[i] > qram[maiorram] entao
+maiorram <- i
+se qhd[i] > qhd[maiorhd] entao
+maiorhd <- i
+fimse
+fimse
+fimpara
+para i de 0 ate 3 faca
+se qram[i] < qram[menorram] entao
+menorram <- i
+se qhd[i] < qhd[menorhd] entao
+menorhd <- i
+fimse
+fimse
+fimpara
+limpatela
+escreval ("CADASTRO DE MÁQUINAS")
+escreval ("------------------------------------------")
+para i de 0 ate 3 faca
+escreval (computador[i], ": ")
+escreval ("memória RAM: ", qram[i] , "GB")
+escreval ("memória HD: ", qhd[i] , "GB")
+escreval ("------------------------------------------")
+fimpara
+escreval ("MAIOR RAM: [", computador[maiorram], "] ")
+escreval ("MENOR RAM: [", computador[menorram], "] ")
+escreval ("MAIOR HD: [", computador[maiorhd], "] ")
+escreval ("MENOR HD: [", computador[menorhd], "] ")
+fimalgoritmo
